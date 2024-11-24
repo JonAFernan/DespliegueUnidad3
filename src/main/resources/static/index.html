@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despliegue Unidad3 Jon A.Fernández</title>
+    <link rel="stylesheet" href="styles.css"> <!-- etiqueta link -->
+</head>
+<body>
+    <nav>
+        <h2>Despliegue de aplicaciones web unidad 3</h2>
+        <h3>Jon A. Fernández</h3>     
+    </nav>
+
+    <section class="clock">
+        <h1 id="time">00:00:00</h1>   
+    </section>
+    
+    <script>
+        function updateTime() {
+            const timeElement = document.getElementById('time');
+            fetch('/hora')
+                .then(response => response.text())
+                .then(data => {
+                    timeElement.textContent = data;
+                });
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>

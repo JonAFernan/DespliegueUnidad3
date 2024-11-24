@@ -1,0 +1,28 @@
+body {
+    background-color: #1c3166;
+    margin: 0;
+}
+
+nav {
+    background-color: #336699;
+    padding: 1em 2em 2em 2em;
+    color: white;
+}
+
+h2, h3 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+h1 {
+    font-size: 4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
